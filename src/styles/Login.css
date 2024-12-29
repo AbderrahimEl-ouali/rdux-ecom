@@ -1,0 +1,206 @@
+
+
+
+/* Gradient Background Animation */
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Centering the Login Card */
+.login-container {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+/* Login Card Styles */
+.login-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    padding: 40px 50px;
+    text-align: center;
+    width: 380px;
+    position: relative;
+    animation: slideUp 1.2s ease-out;
+}
+
+/* Slide-Up Animation */
+@keyframes slideUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Title Styling */
+.login-card h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Input Fields */
+.login-card input[type="text"],
+.login-card input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 15px 0;
+    border: none;
+    border-radius: 10px;
+    background: rgba(240, 240, 240, 1);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    color: #333;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.login-card input[type="text"]:focus,
+.login-card input[type="password"]:focus {
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.2), 0 0 5px rgba(52, 152, 219, 0.8);
+    background: #f9f9f9;
+}
+
+/* Button Styles */
+.login-card button[type="submit"] {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-radius: 10px;
+    background: rgb(69, 97, 255);
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-card button[type="submit"]:hover {
+    background: rgb(69, 97, 255);
+    
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Error Message */
+.error-message {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Decorative Elements */
+.login-card:before,
+.login-card:after {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.1));
+    z-index: -1;
+    animation: float 5s infinite ease-in-out;
+}
+
+.login-card:before {
+    top: -30px;
+    left: -30px;
+}
+
+.login-card:after {
+    bottom: -30px;
+    right: -30px;
+}
+
+/* Floating Animation for Decorative Elements */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .login-container {
+        margin-top: 100px;
+       
+        padding: 0 20px; 
+    }
+
+    .login-card {
+        width: 90%; 
+        margin-right: 50px;
+        padding: 30px 20px; 
+    }
+
+    .login-card h2 {
+        font-size: 1.5rem; 
+    }
+
+    .login-card input[type="text"],
+    .login-card input[type="password"] {
+        font-size: 0.9rem; 
+        padding: 10px; 
+    }
+
+    .login-card button[type="submit"] {
+        font-size: 1rem; 
+        padding: 10px 0; 
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .login-container {
+        margin-top: 80px; 
+        margin-right: 200px;
+    }
+
+    .login-card h2 {
+        font-size: 1.3rem; 
+    }
+
+    .login-card {
+        padding: 20px; 
+    }
+
+    .login-card input[type="text"],
+    .login-card input[type="password"] {
+        font-size: 0.8rem; 
+        padding: 8px; 
+    }
+
+    .login-card button[type="submit"] {
+        font-size: 0.9rem; 
+        padding: 8px 0;
+    }
+}
